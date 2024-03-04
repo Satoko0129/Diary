@@ -1,0 +1,16 @@
+<h1>Edit page</h1>
+
+<%= form_with model: @list do |f| %>
+
+  <h4>Diary title</h4>
+  <%= f.text_field :title %>
+
+  <h4>Diary text</h4>
+  <%= f.text_area :body %>
+
+  <h4>Image</h4>
+  <%= f.file_field :image, accept: "image/*" %>
+
+  <%= f.submit "Save" %>
+
+<% end %>
